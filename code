@@ -1,0 +1,2770 @@
+// See https://aka.ms/new-console-template for more information
+{   //variables
+    string p1, p2, p1moves, p2moves;
+    int maxm = 50, p1mp = 0, p2mp = 0, p1pp = 50, p2pp = 50, p1letter = 1, p2letter = 1, p1honor = 1, p2honor = 1;
+    //intro 
+    var arr = new[]
+  {
+                    @"      ______    _                                __   ____      ____                             ",
+                    @"    .' ____ \  / |_                             |  ] |_  _|    |_  _|                          ",
+                    @"    | (___ \_|`| |-'_ .--.  ,--.   _ .--.   .--.| |    \ \  /\  / /,--.   _ .--.  .--.             ",
+                    @"     _.____`.  | | [ `/'`\]`'_\ : [ `.-. |/ /'`\' |     \ \/  \/ /`'_\ : [ `/'`\]( (`\]           ",
+                    @"    | \____) | | |, | |    // | |, | | | || \__/  |      \  /\  / // | |, | |     `'.'.          ",
+                    @"     \______.' \__/[___]   \'-;__/[___||__]'.__.;__]      \/  \/  \'-;__/[___]   [\__) )           ",
+                    @"                                                                                                   ",
+            };
+    Console.WindowWidth = 160;
+    Console.WriteLine("\n\n");
+    foreach (string line in arr)
+        Console.WriteLine(line);
+    Console.ReadKey();
+    Console.WriteLine("Press Enter to Continue");
+    Console.ReadKey();
+    Console.Clear();
+    Console.WriteLine("In the old town of Ath'nëo, a new event has emerged: The Melo Cup.");
+    Console.ReadKey();
+    Console.WriteLine();
+    Console.WriteLine("4 individuals, represented by their families, will participate and impress Mister Melo with the best of their wits.");
+    Console.WriteLine("The participants are Humss T. Boi, Aga, Stem Lord, and Ei B. M. ");
+    Console.ReadKey();
+    Console.WriteLine();
+    Console.WriteLine("Rumor has it that the winner of the cup shall win a legendary weapon: The Melo Meter Stick.");
+    Console.ReadKey();
+    Console.WriteLine();
+    Console.WriteLine("It is said that even the gods from all pantheons have no intention of touching it, for it holds mind - twisting power that can grant any wish.");
+    Console.ReadKey();
+    Console.WriteLine();
+    Console.WriteLine("[H] Humss T. Boi: A young woman who summons anything in her power with a book and pen.");
+    Console.WriteLine("She always tries to fight for what she thinks is right. She’s a closeted communist, though. Her sexuality is unknown. She wishes to have world peace.");
+    Console.WriteLine("Her sexuality is unknown. She wishes to have world peace.");
+    Console.ReadKey();
+    Console.WriteLine();
+    Console.WriteLine("[G] Aga: A teenage boy with many talents, so he uses a deadly umbrella, flexible for all types of combat.");
+    Console.WriteLine("He is a wild social butterfly, who can befriend anybody with a glance.");
+    Console.WriteLine("Adults dislike him because they think he has no direction in life.");
+    Console.WriteLine("He just wants to be understood--and probably have an eternal party.");
+    Console.ReadKey();
+    Console.WriteLine();
+    Console.WriteLine("[A] Ei B. M.: A mid-20’s lady who uses a paper sword, folded out of rejected business proposals. ");
+    Console.WriteLine("She always has supply and demand problems on her mind, especially when she’s eyeing that summer sale.");
+    Console.WriteLine("She gets in constant verbal spats with Humss T. Boi, because of Ei’s belief in capitalism. She wishes to end financial poverty.");
+    Console.ReadKey();
+    Console.WriteLine();
+    Console.WriteLine("[S] Stem Lord: An early 30’s man who uses a whip made out of measuring tape.");
+    Console.WriteLine("He cries every time because he always has a lot on his plate, especially when people expect a lot from him. ");
+    Console.WriteLine("He always manages to push through though. He wishes to get a full-body massage.");
+    Console.ReadKey();
+    Console.WriteLine();
+    Console.Write("Choose P1: ");
+    p1 = Console.ReadLine();
+    Console.WriteLine();
+    Console.Write("Choose P2: ");
+    p2 = Console.ReadLine();
+    Console.WriteLine();
+    Console.ReadKey();
+    Console.Clear();
+    if (p1 == "H" && p2 == "G")
+    {
+        Console.WriteLine("Player 1 is Humss T. Boi and Player 2 is Aga.");
+        while (p1mp < maxm && p2mp < maxm)
+        {
+            Console.WriteLine("Let the Melo Cup Begin! ");
+
+            Console.WriteLine("P1 move");
+            Console.WriteLine("Melo Points: " + p1mp);
+            Console.WriteLine("Procrastination Points: " + p1pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Read The Communist Manifesto: +5 MP on self, -3 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Cancel: -3 MP on opponent, -2 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Play Lady Gaga: +7 MP on self, -4 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Summon Karl Marx: -4 MP on self, -8 MP on opponent, -3 PP");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p1moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p1moves == "1")
+            {
+                p1mp = p1mp + 5;
+                p1pp = p1pp - 3;
+                Console.WriteLine("Player 1 read the Communist Manifesto!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "2")
+            {
+                p2mp = p2mp - 3;
+                p1pp = p1pp - 2;
+                Console.WriteLine("Player 2 is cancelledt !");
+                Console.WriteLine("Player 2 lost 3 Melo Points and has " + p2mp + " left");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "3")
+            {
+                p1mp = p1mp + 7;
+                p1pp = p1pp - 3;
+                Console.WriteLine("Player 1 played Lady Gaga !");
+                Console.WriteLine("Player 1  has " + p1mp + " Melo Points");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "4")
+            {
+                p1mp = p1mp - 4;
+                p2mp = p2mp - 8;
+                p1pp = p1pp - 4;
+                Console.WriteLine("Player 1 Summoned Karl Marx !");
+                Console.WriteLine("Player 1 has lost 4 Melo Points and has " + p1mp + " left");
+                Console.WriteLine("But Player 2 has lost 8 and has " + p2mp + " left");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "5" && p1letter == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 5;
+                p1letter = p1letter - 1;
+                Console.WriteLine("Player 1 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "6" && p1honor == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 8;
+                p1honor = p1honor - 1;
+                Console.WriteLine("Player 1 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1letter == 0 && p1moves == "5" || p1honor == 0 && p1moves == "6")
+            {
+                Console.WriteLine("Ho noooooo. You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1pp == 0)
+            {
+                Console.WriteLine("You're out of procrastination points. :( ");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            Console.WriteLine("P2 move");
+            Console.WriteLine("Melo Points: " + p2mp);
+            Console.WriteLine("Procrastination Points: " + p2pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Empower: +7 MP on self, +4 MP on opponent, - 2 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Blast Music: -1 MP on self, -2 MP on opponent, -0 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Disaster Risk Reduction: +10 MP on self, +6 MP on opponent, -7 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Umbrella Combo: -6 MP on self, -9 MP on opponent, -5 PP");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p2moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p2moves == "1")
+            {
+                p2mp = p2mp + 7;
+                p1mp = p1mp + 4;
+                p2pp = p2pp - 2;
+                Console.WriteLine("Player 2 empowered everyone!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "2")
+            {
+                p1mp = p1mp - 2;
+                p2pp = p2pp - 1;
+                Console.WriteLine("Player 2 blasted music!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "3")
+            {
+                p2mp = p2mp + 10;
+                p1mp = p1mp + 6;
+                p2pp = p2pp - 7;
+                Console.WriteLine("Player 2 taught everyone to be safe!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "4")
+            {
+                p2mp = p2mp - 6;
+                p1mp = p1mp - 9;
+                p2pp = p2pp - 5;
+                Console.WriteLine("Player 2 accepted everybody!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "5" && p2letter == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 5;
+                p2letter = p2letter - 1;
+                Console.WriteLine("Player 2 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "6" && p2honor == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 8;
+                p2honor = p2honor - 1;
+                Console.WriteLine("Player 2 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2letter == 0 && p2moves == "5" || p2honor == 0 && p2moves == "6")
+            {
+                Console.WriteLine("HUh?? You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2pp == 0)
+            {
+                Console.WriteLine("You're out of procrastination points. :( ");
+                Console.ReadKey();
+                Console.Clear();
+            }
+
+
+        }
+        if (p1mp >= maxm)
+        {
+            Console.WriteLine("Humss Wins!");
+        }
+        else if (p2mp >= maxm)
+        {
+            Console.WriteLine("Aga Wins!");
+        }
+        else if (p1pp == 0)
+        {
+            Console.WriteLine("Yikes looks like Player 1 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 2 wins for being SO GOOD.");
+        }
+        else if (p2pp == 0)
+        {
+            Console.WriteLine("Oofen looks like Player 2 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 1 wins for being SO NICE.");
+        }
+    }
+    else if (p1 == "H" && p2 == "A")
+    {
+        Console.WriteLine("Player 1 is Humss T. Boi and Player 2 is Ei B. M..");
+        while (p1mp < maxm && p2mp < maxm)
+        {
+            Console.WriteLine("P1 move");
+            Console.WriteLine("Melo Points: " + p1mp);
+            Console.WriteLine("Procrastination Points: " + p1pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Read The Communist Manifesto: +5 MP on self, -3 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Cancel: -3 MP on opponent, -2 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Play Lady Gaga: +7 MP on self, -4 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Summon Karl Marx: -4 MP on self, -8 MP on opponent, -3 PP");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p1moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+            if (p1moves == "1")
+            {
+                p1mp = p1mp + 5;
+                p1pp = p1pp - 3;
+                Console.WriteLine("Player 1 read the Communist Manifesto!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "2")
+            {
+                p2mp = p2mp - 3;
+                p1pp = p1pp - 2;
+                Console.WriteLine("Player 2 is cancelledt !");
+                Console.WriteLine("Player 2 lost 3 Melo Points and has " + p2mp + " left");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "3")
+            {
+                p1mp = p1mp + 7;
+                p1pp = p1pp - 3;
+                Console.WriteLine("Player 1 played Lady Gaga !");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "4")
+            {
+                p1mp = p1mp - 4;
+                p2mp = p2mp - 8;
+                p1pp = p1pp - 4;
+                Console.WriteLine("Player 1 Summoned Karl Marx !");
+                Console.WriteLine("Player 1 has lost 4 Melo Points and has " + p1mp + " left");
+                Console.WriteLine("But Player 2 has lost 8 and has " + p2mp + " left");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "5" && p1letter == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 5;
+                p1letter = p1letter - 1;
+                Console.WriteLine("Player 1 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "6" && p1honor == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 8;
+                p1honor = p1honor - 1;
+                Console.WriteLine("Player 1 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1letter == 0 && p1moves == "5" || p1honor == 0 && p1moves == "6")
+            {
+                Console.WriteLine("Ho noooooo. You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1pp == 0)
+            {
+                Console.WriteLine("You're out of procrastionation points :(");
+                Console.ReadKey();
+                Console.Clear();
+            }
+
+
+            Console.WriteLine("P2 move");
+            Console.WriteLine("Melo Points: " + p2mp);
+            Console.WriteLine("Procrastination Points: " + p2pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Praise Capitalism: +4 MP on self, -2 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Throw Rejected Proposals: -6 MP on opponent, -4 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Steal Calculator: +3 MP on self, -4 MP on opponent, -6 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Paper Cut: -9 MP on self, -13 MP on opponent, -6 PP");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p2moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p2moves == "1")
+            {
+                p2mp = p2mp + 4;
+                p2pp = p2pp - 2;
+                Console.WriteLine("Player 2 praised capitalism!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "2")
+            {
+                p1mp = p1mp - 6;
+                p2pp = p2pp - 4;
+                Console.WriteLine("Player 2 threw rejected proposals!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "3")
+            {
+                p2mp = p2mp + 3;
+                p1mp = p1mp - 4;
+                p2pp = p2pp - 6;
+                Console.WriteLine("Player 2 stole a calculator!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "4")
+            {
+                p2mp = p2mp - 9;
+                p1mp = p1mp - 13;
+                p2pp = p2pp - 6;
+                Console.WriteLine("Player 2 cut everyone!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "5" && p2letter == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 5;
+                p2letter = p2letter - 1;
+                Console.WriteLine("Player 2 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "6" && p2honor == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 8;
+                p2honor = p2honor - 1;
+                Console.WriteLine("Player 2 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2letter == 0 && p2moves == "5" || p2honor == 0 && p2moves == "6")
+            {
+                Console.WriteLine("HUh?? You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2pp == 0)
+            {
+                Console.WriteLine("You're out of procrastination points. :( ");
+                Console.ReadKey();
+                Console.Clear();
+            }
+
+        }
+        if (p1mp >= maxm)
+        {
+            Console.WriteLine("Humss Wins!");
+        }
+        else if (p2mp >= maxm)
+        {
+            Console.WriteLine("Ei Wins!");
+        }
+        else if (p1pp == 0)
+        {
+            Console.WriteLine("Yikes looks like Player 1 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 2 wins for being SO GOOD.");
+        }
+        else if (p2pp == 0)
+        {
+            Console.WriteLine("Oofen looks like Player 2 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 1 wins for being SO NICE.");
+        }
+    }
+    else if (p1 == "H" && p2 == "S")
+    {
+        Console.WriteLine("Player 1 is Humss T. Boi and Player 2 is Stem Lord.");
+        while (p1mp < maxm && p2mp < maxm)
+        {
+            Console.WriteLine("P1 move");
+            Console.WriteLine("Melo Points: " + p1mp);
+            Console.WriteLine("Procrastination Points: " + p1pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Read The Communist Manifesto: +5 MP on self, -3 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Cancel: -3 MP on opponent, -2 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Play Lady Gaga: +7 MP on self, -4 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Summon Karl Marx: -4 MP on self, -8 MP on opponent, -3 PP");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p1moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+            if (p1moves == "1")
+            {
+                p1mp = p1mp + 5;
+                p1pp = p1pp - 3;
+                Console.WriteLine("Player 1 read the Communist Manifesto!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "2")
+            {
+                p2mp = p2mp - 3;
+                p1pp = p1pp - 2;
+                Console.WriteLine("Player 2 is cancelledt !");
+                Console.WriteLine("Player 2 lost 3 Melo Points and has " + p2mp + " left");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "3")
+            {
+                p1mp = p1mp + 7;
+                p1pp = p1pp - 3;
+                Console.WriteLine("Player 1 played Lady Gaga !");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "4")
+            {
+                p1mp = p1mp - 4;
+                p2mp = p2mp - 8;
+                p1pp = p1pp - 4;
+                Console.WriteLine("Player 1 Summoned Karl Marx !");
+                Console.WriteLine("Player 1 has lost 4 Melo Points and has " + p1mp + " left");
+                Console.WriteLine("But Player 2 has lost 8 and has " + p2mp + " left");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "5" && p1letter == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 5;
+                p1letter = p1letter - 1;
+                Console.WriteLine("Player 1 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "6" && p1honor == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 8;
+                p1honor = p1honor - 1;
+                Console.WriteLine("Player 1 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1letter == 0 && p1moves == "5" || p1honor == 0 && p1moves == "6")
+            {
+                Console.WriteLine("Ho noooooo. You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1pp == 0)
+            {
+                Console.WriteLine("You're out procrastination points. :( ");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            //stem
+            Console.WriteLine("P2 move");
+            Console.WriteLine("Melo Points: " + p2mp);
+            Console.WriteLine("Procrastination Points: " + p2pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Formulate Equation: +10 MP on self, -7 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Dominate: -5 MP on opponent, -3 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Whiplash: +8 MP on self, -4 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Cry: +2 MP on self, -1 MP on opponent");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p2moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p2moves == "1")
+            {
+                p2mp = p2mp + 10;
+                p2pp = p2pp - 7;
+                Console.WriteLine("Player 2 formulated a difficult equation!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "2")
+            {
+                p1mp = p1mp - 5;
+                p2pp = p2pp - 3;
+                Console.WriteLine("Player 2 dominated the academic field!");
+                Console.WriteLine("Player 1 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "3")
+            {
+                p2mp = p2mp + 8;
+                p2pp = p2pp - 4;
+                Console.WriteLine("Player 2 drew power from his whip!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "4")
+            {
+                p2mp = p2mp - 1;
+                p1mp = p1mp - 2;
+                Console.WriteLine("Player 2 cried!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "5" && p2letter == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 5;
+                p2letter = p2letter - 1;
+                Console.WriteLine("Player 2 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "6" && p2honor == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 8;
+                p1honor = p1honor - 1;
+                Console.WriteLine("Player 2 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2letter == 0 && p2moves == "5" || p2honor == 0 && p2moves == "6")
+            {
+                Console.WriteLine("HUh?? You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2pp == 0)
+            {
+                Console.WriteLine("You're out of procrastination points. :( ");
+                Console.ReadKey();
+                Console.Clear();
+            }
+
+        }
+        if (p1mp >= maxm)
+        {
+            Console.WriteLine("Humss Wins!");
+        }
+        else if (p2mp >= maxm)
+        {
+            Console.WriteLine("Stem Wins!");
+        }
+        else if (p1pp == 0)
+        {
+            Console.WriteLine("Yikes looks like Player 1 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 2 wins for being SO GOOD.");
+        }
+        else if (p2pp == 0)
+        {
+            Console.WriteLine("Oofen looks like Player 2 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 1 wins for being SO NICE.");
+        }
+    }
+    else if (p1 == "G" && p2 == "H")
+    {
+        Console.WriteLine("Player 1 is Aga and Player 2 is Humss T. Boi.");
+        while (p1mp < maxm && p2mp < maxm)
+        {
+            Console.WriteLine("P1 move");
+            Console.WriteLine("Melo Points: " + p2mp);
+            Console.WriteLine("Procrastination Points: " + p2pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Empower: +7 MP on self, +4 MP on opponent, - 2 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Blast Music: -1 MP on self, -2 MP on opponent, -0 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Disaster Risk Reduction: +10 MP on self, +6 MP on opponent, -7 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Umbrella Combo: -6 MP on self, -9 MP on opponent, -5 PP");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p1moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p1moves == "1")
+            {
+                p2mp = p2mp + 7;
+                p1mp = p1mp + 4;
+                p2pp = p2pp - 2;
+                Console.WriteLine("Player 1 empowered everyone!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "2")
+            {
+                p1mp = p1mp - 1;
+                p2pp = p2pp - 2;
+                Console.WriteLine("Player 1 blasted music!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "3")
+            {
+                p1mp = p1mp + 10;
+                p2mp = p2mp + 6;
+                p1pp = p1pp - 7;
+                Console.WriteLine("Player 1 taught everyone to be safe!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "4")
+            {
+                p1mp = p1mp - 6;
+                p2mp = p2mp - 9;
+                p1pp = p1pp - 5;
+                Console.WriteLine("Player 1 accepted everybody!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "5" && p1letter == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 5;
+                p1letter = p1letter - 1;
+                Console.WriteLine("Player 1 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "6" && p1honor == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 8;
+                p1honor = p1honor - 1;
+                Console.WriteLine("Player 1 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1letter == 0 && p1moves == "5" || p1honor == 0 && p1moves == "6")
+            {
+                Console.WriteLine("Ho noooooo. You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1pp == 0)
+            {
+                Console.WriteLine("You're out of procrastination points. :( ");
+                Console.ReadKey();
+                Console.Clear();
+            }
+
+            Console.WriteLine("P2 move");
+            Console.WriteLine("Melo Points: " + p2mp);
+            Console.WriteLine("Procrastination Points: " + p2pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Read The Communist Manifesto: +5 MP on self, -3 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Cancel: -3 MP on opponent, -2 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Play Lady Gaga: +7 MP on self, -4 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Summon Karl Marx: -4 MP on self, -8 MP on opponent, -3 PP");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p2moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p2moves == "1")
+            {
+                p2mp = p2mp + 5;
+                p2pp = p2pp - 3;
+                Console.WriteLine("Player 2 read the Communist Manifesto!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "2")
+            {
+                p1mp = p1mp - 3;
+                p2pp = p2pp - 2;
+                Console.WriteLine("Player 1 is cancelledt !");
+                Console.WriteLine("Player 1 lost 3 Melo Points and has " + p1mp + " left");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "3")
+            {
+                p2mp = p2mp + 7;
+                p2pp = p2pp - 3;
+                Console.WriteLine("Player 2 played Lady Gaga !");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "4")
+            {
+                p2mp = p2mp - 4;
+                p1mp = p1mp - 8;
+                p2pp = p2pp - 4;
+                Console.WriteLine("Player 2 Summoned Karl Marx !");
+                Console.WriteLine("Player 2 has lost 4 Melo Points and has " + p2mp + " left");
+                Console.WriteLine("But Player 1 has lost 8 and has " + p1mp + " left");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "5" && p2letter == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 5;
+                p2letter = p2letter - 1;
+                Console.WriteLine("Player 2 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "6" && p2honor == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 8;
+                Console.WriteLine("Player 2 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2letter == 0 && p2moves == "5" || p2honor == 0 && p2moves == "6")
+            {
+                Console.WriteLine("HUh?? You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2pp == 0)
+            {
+                Console.WriteLine("You're out of procrastination points. :( ");
+                Console.ReadKey();
+                Console.Clear();
+            }
+        }
+        if (p1mp >= maxm)
+        {
+            Console.WriteLine("Aga Wins!");
+        }
+        else if (p2mp >= maxm)
+        {
+            Console.WriteLine("Humss Wins!");
+        }
+        else if (p1pp == 0)
+        {
+            Console.WriteLine("Yikes looks like Player 1 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 2 wins for being SO GOOD.");
+        }
+        else if (p2pp == 0)
+        {
+            Console.WriteLine("Oofen looks like Player 2 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 1 wins for being SO NICE.");
+        }
+
+    }
+    else if (p1 == "G" && p2 == "A")
+    {
+        Console.WriteLine("Player 1 is Aga and Player 2 is Ei B. M..");
+        while (p1mp < maxm && p2mp < maxm)
+        {
+            Console.WriteLine("P1 move");
+            Console.WriteLine("Melo Points: " + p1mp);
+            Console.WriteLine("Procrastination Points: " + p1pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Empower: +7 MP on self, +4 MP on opponent, - 2 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Blast Music: -1 MP on self, -2 MP on opponent, -0 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Disaster Risk Reduction: +10 MP on self, +6 MP on opponent, -7 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Umbrella Combo: -6 MP on self, -9 MP on opponent, -5 PP");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p1moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p1moves == "1")
+            {
+                p1mp = p1mp + 7;
+                p2mp = p2mp + 4;
+                p1pp = p1pp - 2;
+                Console.WriteLine("Player 1 empowered everyone!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "2")
+            {
+                p1mp = p1mp - 1;
+                p2pp = p2pp - 2;
+                Console.WriteLine("Ei blasted music!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "3")
+            {
+                p1mp = p1mp + 10;
+                p2mp = p2mp + 6;
+                p1pp = p1pp - 7;
+                Console.WriteLine("Player 1 taught everyone to be safe!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "4")
+            {
+                p1mp = p1mp - 6;
+                p2mp = p2mp - 9;
+                p1pp = p1pp - 5;
+                Console.WriteLine("Player 1 accepted everybody!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "5" && p1letter == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 5;
+                p1letter = p1letter - 1;
+                Console.WriteLine("Player 1 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "6" && p1honor == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 8;
+                p1honor = p1honor - 1;
+                Console.WriteLine("Player 1 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1letter == 0 && p1moves == "5" || p1honor == 0 && p1moves == "6")
+            {
+                Console.WriteLine("Ho noooooo. You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1pp == 0)
+            {
+                Console.WriteLine("You're out procrastination points. :( ");
+                Console.ReadKey();
+                Console.Clear();
+            }
+
+            Console.WriteLine("P2 move");
+            Console.WriteLine("Melo Points: " + p2mp);
+            Console.WriteLine("Procrastination Points: " + p2pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Praise Capitalism: +4 MP on self, -2 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Throw Rejected Proposals: -6 MP on opponent, -4 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Steal Calculator: +3 MP on self, -4 MP on opponent, -6 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Paper Cut: -9 MP on self, -13 MP on opponent, -6 PP");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p2moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p2moves == "1")
+            {
+                p2mp = p2mp + 4;
+                p2pp = p2pp - 2;
+                Console.WriteLine("Player 2 praised capitalism!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "2")
+            {
+                p1mp = p1mp - 6;
+                p2pp = p2pp - 4;
+                Console.WriteLine("Player 2 threw rejected proposals!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "3")
+            {
+                p2mp = p2mp + 3;
+                p1mp = p1mp - 4;
+                p2pp = p2pp - 6;
+                Console.WriteLine("Player 2 stole a calculator!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "4")
+            {
+                p2mp = p2mp - 9;
+                p1mp = p1mp - 13;
+                p2pp = p2pp - 6;
+                Console.WriteLine("Player 2 cut everyone!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "5" && p2letter == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 5;
+                p2letter = p2letter - 1;
+                Console.WriteLine("Player 2 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "6" && p2honor == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 8;
+                p2honor = p2honor - 1;
+                Console.WriteLine("Player 2 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2letter == 0 && p2moves == "5" || p2honor == 0 && p2moves == "6")
+            {
+                Console.WriteLine("HUh?? You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2pp == 0)
+            {
+                Console.WriteLine("You're out of procrastination points. :( ");
+                Console.ReadKey();
+                Console.Clear();
+            }
+        }
+        if (p1mp >= maxm)
+        {
+            Console.WriteLine("Aga Wins!");
+        }
+        else if (p2mp >= maxm)
+        {
+            Console.WriteLine("Ei Wins!");
+        }
+        else if (p1pp == 0)
+        {
+            Console.WriteLine("Yikes looks like Player 1 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 2 wins for being SO GOOD.");
+        }
+        else if (p2pp == 0)
+        {
+            Console.WriteLine("Oofen looks like Player 2 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 1 wins for being SO NICE.");
+        }
+    }
+    else if (p1 == "G" && p2 == "S")
+    {
+        Console.WriteLine("Player 1 is Aga and Player 2 is Stem Lord.");
+        while (p1mp < maxm && p2mp < maxm)
+        {
+            Console.WriteLine("P1 move");
+            Console.WriteLine("Melo Points: " + p1mp);
+            Console.WriteLine("Procrastination Points: " + p1pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Empower: +7 MP on self, +4 MP on opponent, - 2 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Blast Music: -1 MP on self, -2 MP on opponent, -0 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Disaster Risk Reduction: +10 MP on self, +6 MP on opponent, -7 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Umbrella Combo: -6 MP on self, -9 MP on opponent, -5 PP");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p1moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p1moves == "1")
+            {
+                p1mp = p1mp + 7;
+                p2mp = p2mp + 4;
+                p1pp = p1pp - 2;
+                Console.WriteLine("Player 1 empowered everyone!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "2")
+            {
+                p1mp = p1mp - 1;
+                p2pp = p2pp - 2;
+                Console.WriteLine("Ei blasted music!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "3")
+            {
+                p1mp = p1mp + 10;
+                p2mp = p2mp + 6;
+                p1pp = p1pp - 7;
+                Console.WriteLine("Player 1 taught everyone to be safe!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "4")
+            {
+                p1mp = p1mp - 6;
+                p2mp = p2mp - 9;
+                p1pp = p1pp - 5;
+                Console.WriteLine("Player 1 accepted everybody!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "5" && p1letter == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 5;
+                p1letter = p1letter - 1;
+                Console.WriteLine("Player 1 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "6" && p1honor == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 8;
+                p1honor = p1honor - 1;
+                Console.WriteLine("Player 1 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1letter == 0 && p1moves == "5" || p1honor == 0 && p1moves == "6")
+            {
+                Console.WriteLine("Ho noooooo. You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1pp == 0)
+            {
+                Console.WriteLine("You're out procrastination points. :( ");
+                Console.ReadKey();
+                Console.Clear();
+            }
+
+            Console.WriteLine("P2 move");
+            Console.WriteLine("Melo Points: " + p2mp);
+            Console.WriteLine("Procrastination Points: " + p2pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Formulate Equation: +10 MP on self, -7 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Dominate: -5 MP on opponent, -3 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Whiplash: +8 MP on self, -4 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Cry: +2 MP on self, -1 MP on opponent");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p2moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p2moves == "1")
+            {
+                p2mp = p2mp + 10;
+                p2pp = p2pp - 7;
+                Console.WriteLine("Player 2 formulated a difficult equation!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "2")
+            {
+                p1mp = p1mp - 5;
+                p2pp = p2pp - 3;
+                Console.WriteLine("Player 2 dominated the academic field!");
+                Console.WriteLine("Player 1 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "3")
+            {
+                p2mp = p2mp + 8;
+                p2pp = p2pp - 4;
+                Console.WriteLine("Player 2 drew power from his whip!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "4")
+            {
+                p2mp = p2mp - 1;
+                p1mp = p1mp - 2;
+                Console.WriteLine("Player 2 cried!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "5" && p2letter == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 5;
+                p2letter = p2letter - 1;
+                Console.WriteLine("Player 2 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "6" && p2honor == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 8;
+                p1honor = p1honor - 1;
+                Console.WriteLine("Player 2 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2letter == 0 && p2moves == "5" || p2honor == 0 && p2moves == "6")
+            {
+                Console.WriteLine("HUh?? You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2pp == 0)
+            {
+                Console.WriteLine("You're out of procrastination points. :( ");
+                Console.ReadKey();
+                Console.Clear();
+            }
+
+        }
+        if (p1mp >= maxm)
+        {
+            Console.WriteLine("Aga Wins!");
+        }
+        else if (p2mp >= maxm)
+        {
+            Console.WriteLine("Stem Wins!");
+        }
+        else if (p1pp == 0)
+        {
+            Console.WriteLine("Yikes looks like Player 1 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 2 wins for being SO GOOD.");
+        }
+        else if (p2pp == 0)
+        {
+            Console.WriteLine("Oofen looks like Player 2 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 1 wins for being SO NICE.");
+        }
+    }
+    else if (p1 == "A" && p2 == "H")
+    {
+        Console.WriteLine("Player 1 is Ei B. M. and Player 2 is Humss T. Boi.");
+        while (p1mp < maxm && p2mp < maxm)
+        {
+            Console.WriteLine("P1 move");
+            Console.WriteLine("Melo Points: " + p1mp);
+            Console.WriteLine("Procrastination Points: " + p1pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Praise Capitalism: +4 MP on self, -2 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Throw Rejected Proposals: -6 MP on opponent, -4 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Steal Calculator: +3 MP on self, -4 MP on opponent, -6 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Paper Cut: -9 MP on self, -13 MP on opponent, -6 PP");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p1moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p1moves == "1")
+            {
+                p1mp = p1mp + 4;
+                p1pp = p1pp - 2;
+                Console.WriteLine("Player 1 praised capitalism!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "2")
+            {
+                p2mp = p2mp - 6;
+                p1pp = p1pp - 4;
+                Console.WriteLine("Player 1 threw rejected proposals!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "3")
+            {
+                p1mp = p1mp + 3;
+                p2mp = p2mp - 4;
+                p1pp = p1pp - 6;
+                Console.WriteLine("Player 1 stole a calculator!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "4")
+            {
+                p1mp = p1mp - 9;
+                p2mp = p2mp - 13;
+                p1pp = p1pp - 6;
+                Console.WriteLine("Player 2 cut everyone!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "5" && p1letter == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 5;
+                p1letter = p1letter - 1;
+                Console.WriteLine("Player 1 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "6" && p1honor == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 8;
+                p1honor = p1honor - 1;
+                Console.WriteLine("Player 2 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1letter == 0 && p1moves == "5" || p1honor == 0 && p1moves == "6")
+            {
+                Console.WriteLine("Ho noooooo. You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1pp == 0)
+            {
+                Console.WriteLine("You're out of procrastination points. :( ");
+            }
+
+
+            Console.WriteLine("P2 move");
+            Console.WriteLine("Melo Points: " + p2mp);
+            Console.WriteLine("Procrastination Points: " + p2pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Read The Communist Manifesto: +5 MP on self, -3 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Cancel: -3 MP on opponent, -2 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Play Lady Gaga: +7 MP on self, -4 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Summon Karl Marx: -4 MP on self, -8 MP on opponent, -3 PP");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p2moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p2moves == "1")
+            {
+                p2mp = p2mp + 5;
+                p2pp = p2pp - 3;
+                Console.WriteLine("Player 2 read the Communist Manifesto!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "2")
+            {
+                p1mp = p1mp - 3;
+                p2pp = p2pp - 2;
+                Console.WriteLine("Player 2 is cancelledt !");
+                Console.WriteLine("Player 2 lost 3 Melo Points and has " + p1mp + " left");
+                Console.WriteLine("Player 1 has " + p2pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "3")
+            {
+                p2mp = p2mp + 7;
+                p2pp = p2pp - 3;
+                Console.WriteLine("Player 2 played Lady Gaga !");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "4")
+            {
+                p2mp = p2mp - 4;
+                p1mp = p1mp - 8;
+                p2pp = p2pp - 4;
+                Console.WriteLine("Player 2 Summoned Karl Marx !");
+                Console.WriteLine("Player 2 has lost 4 Melo Points and has " + p2mp + " left");
+                Console.WriteLine("But Player 1 has lost 8 and has " + p1mp + " left");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "5" && p2letter == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 5;
+                p2letter = p2letter - 1;
+                Console.WriteLine("Player 2 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+            }
+            else if (p2moves == "6" && p2honor == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 8;
+                Console.WriteLine("Player 2 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2letter == 0 && p2moves == "5" || p2honor == 0 && p2moves == "6")
+            {
+                Console.WriteLine("HUh?? You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2pp == 0)
+            {
+                Console.WriteLine("You're out of procrastination points. :( ");
+                Console.ReadKey();
+                Console.Clear();
+            }
+        }
+        if (p1mp >= maxm)
+        {
+            Console.WriteLine("Ei Wins!");
+        }
+        else if (p2mp >= maxm)
+        {
+            Console.WriteLine("Humss Wins!");
+        }
+        else if (p1pp == 0)
+        {
+            Console.WriteLine("Yikes looks like Player 1 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 2 wins for being SO GOOD.");
+        }
+        else if (p2pp == 0)
+        {
+            Console.WriteLine("Oofen looks like Player 2 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 1 wins for being SO NICE.");
+        }
+    }
+    else if (p1 == "A" && p2 == "G")
+    {
+        Console.WriteLine("Player 1 is Ei B. M. and Player 2 is Aga.");
+        while (p1mp < maxm && p2mp < maxm)
+        {
+            Console.WriteLine("P1 move");
+            Console.WriteLine("Melo Points: " + p1mp);
+            Console.WriteLine("Procrastination Points: " + p1pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Praise Capitalism: +4 MP on self, -2 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Throw Rejected Proposals: -6 MP on opponent, -4 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Steal Calculator: +3 MP on self, -4 MP on opponent, -6 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Paper Cut: -9 MP on self, -13 MP on opponent, -6 PP");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p1moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p1moves == "1")
+            {
+                p1mp = p1mp + 4;
+                p1pp = p1pp - 2;
+                Console.WriteLine("Player 1 praised capitalism!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "2")
+            {
+                p2mp = p2mp - 6;
+                p1pp = p1pp - 4;
+                Console.WriteLine("Player 1 threw rejected proposals!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "3")
+            {
+                p1mp = p1mp + 3;
+                p2mp = p2mp - 4;
+                p1pp = p1pp - 6;
+                Console.WriteLine("Player 1 stole a calculator!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "4")
+            {
+                p1mp = p1mp - 9;
+                p2mp = p2mp - 13;
+                p1pp = p1pp - 6;
+                Console.WriteLine("Player 2 cut everyone!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "5" && p1letter == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 5;
+                p1letter = p1letter - 1;
+                Console.WriteLine("Player 1 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "6" && p1honor == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 8;
+                p1honor = p1honor - 1;
+                Console.WriteLine("Player 2 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1letter == 0 && p1moves == "5" || p1honor == 0 && p1moves == "6")
+            {
+                Console.WriteLine("Ho noooooo. You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1pp == 0)
+            {
+                Console.WriteLine("You're out of procrastination points. :( ");
+            }
+
+            Console.WriteLine("P2 move");
+            Console.WriteLine("Melo Points: " + p2mp);
+            Console.WriteLine("Procrastination Points: " + p2pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Empower: +7 MP on self, +4 MP on opponent, - 2 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Blast Music: -1 MP on self, -2 MP on opponent, -0 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Disaster Risk Reduction: +10 MP on self, +6 MP on opponent, -7 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Umbrella Combo: -6 MP on self, -9 MP on opponent, -5 PP");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p2moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p2moves == "1")
+            {
+                p2mp = p2mp + 7;
+                p1mp = p1mp + 4;
+                p2pp = p2pp - 2;
+                Console.WriteLine("Player 2 empowered everyone!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "2")
+            {
+                p1mp = p1mp - 2;
+                p2pp = p2pp - 1;
+                Console.WriteLine("Player 2 blasted music!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "3")
+            {
+                p2mp = p2mp + 10;
+                p1mp = p1mp + 6;
+                p2pp = p2pp - 7;
+                Console.WriteLine("Player 2 taught everyone to be safe!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "4")
+            {
+                p2mp = p2mp - 6;
+                p1mp = p1mp - 9;
+                p2pp = p2pp - 5;
+                Console.WriteLine("Player 2 accepted everybody!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "5" && p2letter == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 5;
+                p2letter = p2letter - 1;
+                Console.WriteLine("Player 2 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "6" && p2honor == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 8;
+                p2honor = p2honor - 1;
+                Console.WriteLine("Player 2 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2letter == 0 && p2moves == "5" || p2honor == 0 && p2moves == "6")
+            {
+                Console.WriteLine("HUh?? You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2pp == 0)
+            {
+                Console.WriteLine("You're out of procrastination points. :( ");
+            }
+        }
+        if (p1mp >= maxm)
+        {
+            Console.WriteLine("Ei Wins!");
+        }
+        else if (p2mp >= maxm)
+        {
+            Console.WriteLine("Aga Wins!");
+        }
+        else if (p1pp == 0)
+        {
+            Console.WriteLine("Yikes looks like Player 1 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 2 wins for being SO GOOD.");
+        }
+        else if (p2pp == 0)
+        {
+            Console.WriteLine("Oofen looks like Player 2 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 1 wins for being SO NICE.");
+        }
+
+    }
+    else if (p1 == "A" && p2 == "S")
+    {
+        Console.WriteLine("Player 1 is Ei B. M. and Player 2 is Stem Lord.");
+        while (p1mp < maxm && p2mp < maxm)
+        {
+            Console.WriteLine("P1 move");
+            Console.WriteLine("Melo Points: " + p1mp);
+            Console.WriteLine("Procrastination Points: " + p1pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Praise Capitalism: +4 MP on self, -2 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Throw Rejected Proposals: -6 MP on opponent, -4 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Steal Calculator: +3 MP on self, -4 MP on opponent, -6 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Paper Cut: -9 MP on self, -13 MP on opponent, -6 PP");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p1moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p1moves == "1")
+            {
+                p1mp = p1mp + 4;
+                p1pp = p1pp - 2;
+                Console.WriteLine("Player 1 praised capitalism!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "2")
+            {
+                p2mp = p2mp - 6;
+                p1pp = p1pp - 4;
+                Console.WriteLine("Player 1 threw rejected proposals!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "3")
+            {
+                p1mp = p1mp + 3;
+                p2mp = p2mp - 4;
+                p1pp = p1pp - 6;
+                Console.WriteLine("Player 1 stole a calculator!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "4")
+            {
+                p1mp = p1mp - 9;
+                p2mp = p2mp - 13;
+                p1pp = p1pp - 6;
+                Console.WriteLine("Player 2 cut everyone!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "5" && p1letter == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 5;
+                p1letter = p1letter - 1;
+                Console.WriteLine("Player 1 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "6" && p1honor == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 8;
+                p1honor = p1honor - 1;
+                Console.WriteLine("Player 2 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1letter == 0 && p1moves == "5" || p1honor == 0 && p1moves == "6")
+            {
+                Console.WriteLine("Ho noooooo. You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1pp == 0)
+            {
+                Console.WriteLine("You're out of procrastination points. :( ");
+            }
+
+            Console.WriteLine("P2 move");
+            Console.WriteLine("Melo Points: " + p2mp);
+            Console.WriteLine("Procrastination Points: " + p2pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Formulate Equation: +10 MP on self, -7 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Dominate: -5 MP on opponent, -3 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Whiplash: +8 MP on self, -4 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Cry: +2 MP on self, -1 MP on opponent");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p2moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p2moves == "1")
+            {
+                p2mp = p2mp + 10;
+                p2pp = p2pp - 7;
+                Console.WriteLine("Player 2 formulated a difficult equation!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "2")
+            {
+                p1mp = p1mp - 5;
+                p2pp = p2pp - 3;
+                Console.WriteLine("Player 2 dominated the academic field!");
+                Console.WriteLine("Player 1 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "3")
+            {
+                p2mp = p2mp + 8;
+                p2pp = p2pp - 4;
+                Console.WriteLine("Player 2 drew power from his whip!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "4")
+            {
+                p2mp = p2mp - 1;
+                p1mp = p1mp - 2;
+                Console.WriteLine("Player 2 cried!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "5" && p2letter == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 5;
+                p2letter = p2letter - 1;
+                Console.WriteLine("Player 2 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "6" && p2honor == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 8;
+                p1honor = p1honor - 1;
+                Console.WriteLine("Player 2 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2letter == 0 && p2moves == "5" || p2honor == 0 && p2moves == "6")
+            {
+                Console.WriteLine("HUh?? You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2pp == 0)
+            {
+                Console.WriteLine("You're out of procrastination points. :( ");
+                Console.ReadKey();
+                Console.Clear();
+            }
+
+        }
+        if (p1mp >= maxm)
+        {
+            Console.WriteLine("Ei Wins!");
+        }
+        else if (p2mp >= maxm)
+        {
+            Console.WriteLine("Stem Wins!");
+        }
+        else if (p1pp == 0)
+        {
+            Console.WriteLine("Yikes looks like Player 1 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 2 wins for being SO GOOD.");
+        }
+        else if (p2pp == 0)
+        {
+            Console.WriteLine("Oofen looks like Player 2 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 1 wins for being SO NICE.");
+        }
+    }
+    else if (p1 == "S" && p2 == "H")
+    {
+        Console.WriteLine("Player 1 is Stem Lord and Player 2 is Humss T. Boi.");
+        while (p1mp < maxm && p2mp < maxm)
+        {
+
+
+            Console.WriteLine("P1 move");
+            Console.WriteLine("Melo Points: " + p1mp);
+            Console.WriteLine("Procrastination Points: " + p1pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Formulate Equation: +10 MP on self, -7 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Dominate: -5 MP on opponent, -3 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Whiplash: +8 MP on self, -4 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Cry: +2 MP on self, -1 MP on opponent");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p1moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p1moves == "1")
+            {
+                p1mp = p1mp + 10;
+                p1pp = p1pp - 7;
+                Console.WriteLine("Player 1 formulated a difficult equation!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "2")
+            {
+                p2mp = p2mp - 5;
+                p1pp = p1pp - 3;
+                Console.WriteLine("Player 1 dominated the academic field!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "3")
+            {
+                p1mp = p1mp + 8;
+                p1pp = p1pp - 4;
+                Console.WriteLine("Player 1 drew power from his whip!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "4")
+            {
+                p1mp = p1mp - 1;
+                p2mp = p2mp - 2;
+                Console.WriteLine("Player 1 cried!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "5" && p1letter == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 5;
+                p1letter = p1letter - 1;
+                Console.WriteLine("Player 1 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "6" && p1honor == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 8;
+                Console.WriteLine("Player 1 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1letter == 0 && p1moves == "5" || p1honor == 0 && p1moves == "6")
+            {
+                Console.WriteLine("Ho noooooo. You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1pp == 0)
+            {
+                Console.WriteLine("You're out of procrastination points. :( ");
+                Console.ReadKey();
+                Console.Clear();
+            }
+
+            Console.WriteLine("P2 move");
+            Console.WriteLine("Melo Points: " + p2mp);
+            Console.WriteLine("Procrastination Points: " + p2pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Read The Communist Manifesto: +5 MP on self, -3 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Cancel: -3 MP on opponent, -2 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Play Lady Gaga: +7 MP on self, -4 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Summon Karl Marx: -4 MP on self, -8 MP on opponent, -3 PP");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p2moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p2moves == "1")
+            {
+                p2mp = p2mp + 5;
+                p2pp = p2pp - 3;
+                Console.WriteLine("Player 2 read the Communist Manifesto!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "2")
+            {
+                p1mp = p1mp - 3;
+                p2pp = p2pp - 2;
+                Console.WriteLine("Player 2 is cancelledt !");
+                Console.WriteLine("Player 2 lost 3 Melo Points and has " + p1mp + " left");
+                Console.WriteLine("Player 1 has " + p2pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "3")
+            {
+                p2mp = p2mp + 7;
+                p2pp = p2pp - 3;
+                Console.WriteLine("Player 2 played Lady Gaga !");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "4")
+            {
+                p2mp = p2mp - 4;
+                p1mp = p1mp - 8;
+                p2pp = p2pp - 4;
+                Console.WriteLine("Player 2 Summoned Karl Marx !");
+                Console.WriteLine("Player 2 has lost 4 Melo Points and has " + p2mp + " left");
+                Console.WriteLine("But Player 1 has lost 8 and has " + p1mp + " left");
+                Console.WriteLine("Player 2 has" + p2pp + " Procrastination Points left");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "5" && p2letter == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 5;
+                p2letter = p2letter - 1;
+                Console.WriteLine("Player 2 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "6" && p2honor == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 8;
+                p1honor = p1honor - 1;
+                Console.WriteLine("Player 2 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2letter == 0 && p2moves == "5" || p2honor == 0 && p2moves == "6")
+            {
+                Console.WriteLine("HUh?? You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2pp == 0)
+            {
+                Console.WriteLine("You're out of procrastination points. :( ");
+                Console.ReadKey();
+                Console.Clear();
+            }
+        }
+        if (p1mp >= maxm)
+        {
+            Console.WriteLine("Stem Wins!");
+        }
+        else if (p2mp >= maxm)
+        {
+            Console.WriteLine("Ei Wins!");
+        }
+        else if (p1pp == 0)
+        {
+            Console.WriteLine("Yikes looks like Player 1 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 2 wins for being SO GOOD.");
+        }
+        else if (p2pp == 0)
+        {
+            Console.WriteLine("Oofen looks like Player 2 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 1 wins for being SO NICE.");
+        }
+    }
+    else if (p1 == "S" && p2 == "A")
+    {
+        Console.WriteLine("Player 1 is Stem Lord and Player 2 is Ei B. M..");
+        while (p1mp < maxm && p2mp < maxm)
+        {
+            Console.WriteLine("P1 move");
+            Console.WriteLine("Melo Points: " + p1mp);
+            Console.WriteLine("Procrastination Points: " + p1pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Formulate Equation: +10 MP on self, -7 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Dominate: -5 MP on opponent, -3 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Whiplash: +8 MP on self, -4 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Cry: +2 MP on self, -1 MP on opponent");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p1moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p1moves == "1")
+            {
+                p1mp = p1mp + 10;
+                p1pp = p1pp - 7;
+                Console.WriteLine("Player 1 formulated a difficult equation!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "2")
+            {
+                p2mp = p2mp - 5;
+                p1pp = p1pp - 3;
+                Console.WriteLine("Player 1 dominated the academic field!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "3")
+            {
+                p1mp = p1mp + 8;
+                p1pp = p1pp - 4;
+                Console.WriteLine("Player 1 drew power from his whip!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "4")
+            {
+                p1mp = p1mp - 1;
+                p2mp = p2mp - 2;
+                Console.WriteLine("Player 1 cried!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "5" && p1letter == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 5;
+                p1letter = p1letter - 1;
+                Console.WriteLine("Player 1 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "6" && p1honor == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 8;
+                p1honor = p1honor - 1;
+                Console.WriteLine("Player 1 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1letter == 0 && p1moves == "5" || p1honor == 0 && p1moves == "6")
+            {
+                Console.WriteLine("Ho noooooo. You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1pp == 0)
+            {
+                Console.WriteLine("You're out of procrastination points. :( ");
+                Console.ReadKey();
+                Console.Clear();
+            }
+
+            Console.WriteLine("P2 move");
+            Console.WriteLine("Melo Points: " + p2mp);
+            Console.WriteLine("Procrastination Points: " + p2pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Praise Capitalism: +4 MP on self, -2 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Throw Rejected Proposals: -6 MP on opponent, -4 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Steal Calculator: +3 MP on self, -4 MP on opponent, -6 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Paper Cut: -9 MP on self, -13 MP on opponent, -6 PP");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p2moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p2moves == "1")
+            {
+                p2mp = p2mp + 4;
+                p2pp = p2pp - 2;
+                Console.WriteLine("Player 2 praised capitalism!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "2")
+            {
+                p1mp = p1mp - 6;
+                p2pp = p2pp - 4;
+                Console.WriteLine("Player 2 threw rejected proposals!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "3")
+            {
+                p2mp = p2mp + 3;
+                p1mp = p1mp - 4;
+                p2pp = p2pp - 6;
+                Console.WriteLine("Player 2 stole a calculator!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "4")
+            {
+                p2mp = p2mp - 9;
+                p1mp = p1mp - 13;
+                p2pp = p2pp - 6;
+                Console.WriteLine("Player 2 cut everyone!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "5" && p2letter == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 5;
+                p2letter = p2letter - 1;
+                Console.WriteLine("Player 2 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "6" && p2honor == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 8;
+                p2honor = p2honor - 1;
+                Console.WriteLine("Player 2 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2letter == 0 && p2moves == "5" || p2honor == 0 && p2moves == "6")
+            {
+                Console.WriteLine("HUh?? You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2pp == 0)
+            {
+                Console.WriteLine("You're out of procrastination points. :( ");
+            }
+        }
+        if (p1mp >= maxm)
+        {
+            Console.WriteLine("Stem Wins!");
+        }
+        else if (p2mp >= maxm)
+        {
+            Console.WriteLine("Ei Wins!");
+        }
+        else if (p1pp == 0)
+        {
+            Console.WriteLine("Yikes looks like Player 1 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 2 wins for being SO GOOD.");
+        }
+        else if (p2pp == 0)
+        {
+            Console.WriteLine("Oofen looks like Player 2 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 1 wins for being SO NICE.");
+        }
+    }
+    else if (p1 == "S" && p2 == "G")
+    {
+        Console.WriteLine("Player 1 is Stem Lord and Player 2 is Aga.");
+        while (p1mp < maxm && p2mp < maxm)
+        {
+
+            Console.WriteLine("P1 move");
+            Console.WriteLine("Melo Points: " + p1mp);
+            Console.WriteLine("Procrastination Points: " + p1pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Formulate Equation: +10 MP on self, -7 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Dominate: -5 MP on opponent, -3 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Whiplash: +8 MP on self, -4 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Cry: +2 MP on self, -1 MP on opponent");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p1moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p1moves == "1")
+            {
+                p1mp = p1mp + 10;
+                p1pp = p1pp - 7;
+                Console.WriteLine("Player 1 formulated a difficult equation!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "2")
+            {
+                p2mp = p2mp - 5;
+                p1pp = p1pp - 3;
+                Console.WriteLine("Player 1 dominated the academic field!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "3")
+            {
+                p1mp = p1mp + 8;
+                p1pp = p1pp - 4;
+                Console.WriteLine("Player 1 drew power from his whip!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "4")
+            {
+                p1mp = p1mp - 1;
+                p2mp = p2mp - 2;
+                Console.WriteLine("Player 1 cried!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "5" && p1letter == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 5;
+                p1letter = p1letter - 1;
+                Console.WriteLine("Player 1 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p1pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1moves == "6" && p1honor == 1)
+            {
+                p1mp = p1mp + 0;
+                p1pp = p1pp + 8;
+                p1honor = p1honor - 1;
+                Console.WriteLine("Player 1 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p1pp); Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1letter == 0 && p1moves == "5" || p1honor == 0 && p1moves == "6")
+            {
+                Console.WriteLine("Ho noooooo. You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p1pp == 0)
+            {
+                Console.WriteLine("You're out of procrastination points. :( ");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            //here. good boy
+            Console.WriteLine("P2 move");
+            Console.WriteLine("Melo Points: " + p2mp);
+            Console.WriteLine("Procrastination Points: " + p2pp);
+            Console.WriteLine();
+            Console.WriteLine("What will your move be: ");
+            Console.WriteLine("[1]Empower: +7 MP on self, +4 MP on opponent, - 2 PP");
+            Console.WriteLine();
+            Console.WriteLine("[2]Blast Music: -1 MP on self, -2 MP on opponent, -0 PP");
+            Console.WriteLine();
+            Console.WriteLine("[3]Disaster Risk Reduction: +10 MP on self, +6 MP on opponent, -7 PP");
+            Console.WriteLine();
+            Console.WriteLine("[4]Umbrella Combo: -6 MP on self, -9 MP on opponent, -5 PP");
+            Console.WriteLine();
+            Console.WriteLine("[5]Get recommendation letter");
+            Console.WriteLine();
+            Console.WriteLine("[6] Get Honors");
+            Console.WriteLine();
+            Console.WriteLine("Enter move: ");
+            p2moves = Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            if (p2moves == "1")
+            {
+                p2mp = p2mp + 7;
+                p1mp = p1mp + 4;
+                p2pp = p2pp - 2;
+                Console.WriteLine("Player 2 empowered everyone!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "2")
+            {
+                p1mp = p1mp - 2;
+                p2pp = p2pp - 1;
+                Console.WriteLine("Player 2 blasted music!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "3")
+            {
+                p2mp = p2mp + 10;
+                p1mp = p1mp + 6;
+                p2pp = p2pp - 7;
+                Console.WriteLine("Player 2 taught everyone to be safe!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "4")
+            {
+                p2mp = p2mp - 6;
+                p1mp = p1mp - 9;
+                p2pp = p2pp - 5;
+                Console.WriteLine("Player 2 accepted everybody!");
+                Console.WriteLine("Player 2 has " + p2mp + " Melo Points!");
+                Console.WriteLine("Player 1 has " + p1mp + " Melo Points!");
+                Console.WriteLine("Player 2 has " + p2pp + " Procrastination Points!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "5" && p2letter == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 5;
+                p2letter = p2letter - 1;
+                Console.WriteLine("Player 2 asked for a recommendation letter!");
+                Console.WriteLine("They gained 5 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2moves == "6" && p2honor == 1)
+            {
+                p2mp = p2mp + 0;
+                p2pp = p2pp + 8;
+                p2honor = p2honor - 1;
+                Console.WriteLine("Player 2 got honors!");
+                Console.WriteLine("They gained 8 more PP");
+                Console.WriteLine("PP is now " + p2pp);
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2letter == 0 && p2moves == "5" || p2honor == 0 && p2moves == "6")
+            {
+                Console.WriteLine("HUh?? You seem to be out of that!!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (p2pp == 0)
+            {
+                Console.WriteLine("You're out of procrastination points. :( ");
+            }
+
+        }
+        if (p1mp >= maxm)
+        {
+            Console.WriteLine("Stem Wins!");
+        }
+        else if (p2mp >= maxm)
+        {
+            Console.WriteLine("Aga Wins!");
+        }
+        else if (p1pp == 0)
+        {
+            Console.WriteLine("Yikes looks like Player 1 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 2 wins for being SO GOOD.");
+        }
+        else if (p2pp == 0)
+        {
+            Console.WriteLine("Oofen looks like Player 2 ran out of Procrastination Points!");
+            Console.WriteLine("Guess Player 1 wins for being SO NICE.");
+        }
+    }
+}
+
+
+
